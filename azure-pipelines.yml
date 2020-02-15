@@ -27,8 +27,9 @@ stages:
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '3.1.100'
-
-    steps:
+      - group: 'LibraryTest'
+    steps:    
+    - bash: echo $(TresholdAmount)
     - task: UseDotNet@2
       displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
       inputs:
