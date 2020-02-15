@@ -75,6 +75,8 @@ stages:
       succeeded(),
       eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
     )
+  workspace: 
+    clean: all
   jobs:
   - deployment: Deploy
     pool:
