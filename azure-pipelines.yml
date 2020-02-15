@@ -25,9 +25,11 @@ stages:
         - npm
 
     variables:
-      wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-      dotnetSdkVersion: '3.1.100'
-      group: 'LibraryTest'
+    - group: 'LibraryTest'
+    - name: 'wwwrootDir'
+      value: 'Tailspin.SpaceGame.Web/wwwroot'
+    - name: 'dotnetSdkVersion'
+      value: '3.1.100'      
     steps:    
     - bash: echo $(TresholdAmount)
     - task: UseDotNet@2
