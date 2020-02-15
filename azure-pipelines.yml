@@ -26,8 +26,8 @@ stages:
 
     variables:
     - group: 'LibraryTest'
-      wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
-      dotnetSdkVersion: '3.1.100'      
+        wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+        dotnetSdkVersion: '3.1.100'      
     steps:    
     - bash: echo $(TresholdAmount)
     - task: UseDotNet@2
